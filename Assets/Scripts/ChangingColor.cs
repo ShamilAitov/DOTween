@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class ObjectColor : MonoBehaviour
+[RequireComponent(typeof(SpriteRenderer))]
+public class ChangingColor : MonoBehaviour
 {
-    private SpriteRenderer _spriteRenderer;
-    private float _duration = 3;
+    [SerializeField] private float _duration;
 
-    void Start()
+    private SpriteRenderer _spriteRenderer;
+    
+
+    private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.DOColor(Color.green, _duration).SetLoops(-1, LoopType.Yoyo);

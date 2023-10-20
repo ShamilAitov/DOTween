@@ -5,12 +5,13 @@ using DG.Tweening;
 
 public class Scale : MonoBehaviour
 {
+    [SerializeField] private float _numberSeconds;
+
     private Vector3 _originalScale;
     private Vector3 _scaleTo;
     private float _zoomIn = 2f;
-    private float _numberSeconds = 3f;
 
-    void Start()
+    private void Start()
     {
         _originalScale = transform.localScale;
         _scaleTo = _originalScale * _zoomIn;

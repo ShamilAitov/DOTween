@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class SequenceTextChanges : MonoBehaviour
+public class ÑhangingText : MonoBehaviour
 {
     [SerializeField] private Text _text;
 
-    void Start()
+    private void Start()
     {
         Sequence sequence = DOTween.Sequence();
 
